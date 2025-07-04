@@ -8,21 +8,21 @@ package Taller2.Ejercicios;
  *
  * @author Navid Lobato
  */
-public class Estudiante {
+public class Estudiante1 {
 
     private String nombre;
     private String edad;
 
-    public Estudiante() {
+    public Estudiante1() {
         this("Desconocido", "0");
     }
 
-    public Estudiante(String nombre, String precio) {
+    public Estudiante1(String nombre, String precio) {
         this.nombre = nombre;
         this.edad = precio;
     }
 
-    public static void mostrarNombre(Estudiante e) {
+    public static void mostrarNombre(Estudiante1 e) {
         System.out.println("Nombre:" + e.nombre); 
     }
 
