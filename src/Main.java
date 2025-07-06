@@ -18,6 +18,8 @@ import Taller7.Ejercicios.EmpleadoT7;
 import Taller8.Ejercicios.EmpleadoT8;
 import Taller8.Ejercicios.EstudianteT8;
 import Taller8.Ejercicios.GerenteT8;
+import Taller9.Ejercicios.EmpleadoT9;
+import Taller9.Ejercicios.PezT9;
 import java.util.Scanner;
 
 /**
@@ -214,6 +216,16 @@ public class Main {
 
                 break;
             case 9:
+                System.out.println("---------Taller 9-----------");
+                System.out.println("---------Prueba Empleado-----------");
+                EmpleadoT9 empleT9 = new EmpleadoT9("Navid jose ",33, "Desarrollo de software");
+                empleT9.mostrarDetalles();
+                System.out.println("---------Prueba Animal-----------");
+                PezT9 pez= new PezT9("Mojarra Roja", "Mar");
+                pez.mostrarDetalles();
+                break;
+               
+                
             case 10:
             case 11:
             case 12:
