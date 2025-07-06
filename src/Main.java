@@ -15,6 +15,9 @@ import Taller5.Ejercicios.pruebaMain;
 import Taller6.Ejercicios.VehiculoT6;
 import Taller7.Ejercicios.CuentaBancariaT7;
 import Taller7.Ejercicios.EmpleadoT7;
+import Taller8.Ejercicios.EmpleadoT8;
+import Taller8.Ejercicios.EstudianteT8;
+import Taller8.Ejercicios.GerenteT8;
 import java.util.Scanner;
 
 /**
@@ -147,55 +150,69 @@ public class Main {
                 System.out.println("Nombre: " + est4.getNombre());
                 System.out.println("Promedio: " + est4.getNotaProm());
                 System.out.println("Edad: " + est4.getEdad());
-                
+
                 System.out.println("---------Coche---------");
-                CocheT4 c = new CocheT4 ("BMW", "R8", 202);
+                CocheT4 c = new CocheT4("BMW", "R8", 202);
                 //System.out.println("Marca: " + c.marca); // muestra error debido a que es un atributo privado
                 System.out.println("Marca:" + c.getMarca());
                 break;
-                
+
             case 5:
                 System.out.println("---------Taller 5---------");
-                        ProductoEjericioT5 ej= new ProductoEjericioT5 ();
-                        pruebaMain prue = new pruebaMain();
+                ProductoEjericioT5 ej = new ProductoEjericioT5();
+                pruebaMain prue = new pruebaMain();
                 break;
-                
+
             case 6:
-                 System.out.println("---------Taller 6-----------");
-                 
-                 VehiculoT6 veh= new VehiculoT6("Nkd", "Akt");
-                 break;
-                 
-                
-            case 7:
-                
                 System.out.println("---------Taller 6-----------");
-                
+
+                VehiculoT6 veh = new VehiculoT6("Nkd", "Akt");
+                break;
+
+            case 7:
+
+                System.out.println("---------Taller 7-----------");
+
                 System.out.println("------------Empleado----------------");
                 System.out.println("Digite el nombre");
-                String nombret7= sc.nextLine();
+                String nombret7 = sc.nextLine();
                 System.out.println("Digite el salario");
                 double salarioT7 = sc.nextDouble();
-                
-                
+
                 EmpleadoT7 empleadot7 = new EmpleadoT7(nombret7, salarioT7);
                 System.out.println("Nombre: " + nombret7 + "Salario: " + empleadot7.getSalario());
                 empleadot7.setSalario(50);
-                
+
                 System.out.println("------------Cuenta bamncaria----------------");
-                 System.out.println("Digite el numero de cuenta");
-                String numCuentaT7= sc.nextLine();
+                System.out.println("Digite el numero de cuenta");
+                String numCuentaT7 = sc.nextLine();
                 System.out.println("Digite el tipo");
                 String tipoT7 = sc.nextLine();
-                
+
                 CuentaBancariaT7 cue = new CuentaBancariaT7(numCuentaT7, tipoT7, 0);
                 cue.mostrarDetalles();
                 //System.out.println(cue.numCuenta); // no deja acceder ditectamente porque es private 
-                
-                
-                
+
                 break;
             case 8:
+                System.out.println("---------Taller 8-----------");
+                System.out.println("---------Prueba Estudiante--------");
+
+                EstudianteT8 est8_1 = new EstudianteT8("Laura ", 20, "2025A1234");
+                EstudianteT8 est8_2 = new EstudianteT8("Juan ",18 , "2025B5678");
+
+                est8_1.mostrarInformacion();
+                System.out.println("------------------------");
+                est8_2.mostrarInformacion();
+
+                System.out.println("--------- Prueba Empleado y Gerente-----------");
+                EmpleadoT8 empleT8 = new EmpleadoT8("Navid lobato", 1200);
+                GerenteT8 gereT8 = new GerenteT8("Marta Saez", 4300, "Recursos");
+                empleT8.mostrarDetalles();
+                System.out.println("------------------------");
+                gereT8.mostrarDetalles();
+
+                break;
             case 9:
             case 10:
             case 11:
