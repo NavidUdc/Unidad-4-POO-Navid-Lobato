@@ -10,6 +10,9 @@ import Taller2.Ejercicios.Producto;
 import Taller3.Ejercicios.Matematicas;
 import Taller4.Ejercicios.CocheT4;
 import Taller4.Ejercicios.EstudianteT4;
+import Taller5.Ejercicios.ProductoEjericioT5;
+import Taller5.Ejercicios.pruebaMain;
+import Taller6.Ejercicios.VehiculoT6;
 import java.util.Scanner;
 
 /**
@@ -22,6 +25,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Digite una opcion");
         int op = sc.nextInt();
 
         switch (op) {
@@ -144,11 +148,22 @@ public class Main {
                 
                 System.out.println("---------Coche---------");
                 CocheT4 c = new CocheT4 ("BMW", "R8", 202);
-                System.out.println("Marca: " + c.marca); // muestra error debido a que es un atributo privado
+                //System.out.println("Marca: " + c.marca); // muestra error debido a que es un atributo privado
+                System.out.println("Marca:" + c.getMarca());
                 break;
                 
             case 5:
+                System.out.println("---------Taller 5---------");
+                        ProductoEjericioT5 ej= new ProductoEjericioT5 ();
+                        pruebaMain prue = new pruebaMain();
+                break;
+                
             case 6:
+                 System.out.println("---------Taller 6-----------");
+                 
+                 VehiculoT6 veh= new VehiculoT6("Nkd", "Akt");
+                 
+                
             case 7:
             case 8:
             case 9:
