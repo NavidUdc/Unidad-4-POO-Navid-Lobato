@@ -13,6 +13,8 @@ import Taller4.Ejercicios.EstudianteT4;
 import Taller5.Ejercicios.ProductoEjericioT5;
 import Taller5.Ejercicios.pruebaMain;
 import Taller6.Ejercicios.VehiculoT6;
+import Taller7.Ejercicios.CuentaBancariaT7;
+import Taller7.Ejercicios.EmpleadoT7;
 import java.util.Scanner;
 
 /**
@@ -162,9 +164,37 @@ public class Main {
                  System.out.println("---------Taller 6-----------");
                  
                  VehiculoT6 veh= new VehiculoT6("Nkd", "Akt");
+                 break;
                  
                 
             case 7:
+                
+                System.out.println("---------Taller 6-----------");
+                
+                System.out.println("------------Empleado----------------");
+                System.out.println("Digite el nombre");
+                String nombret7= sc.nextLine();
+                System.out.println("Digite el salario");
+                double salarioT7 = sc.nextDouble();
+                
+                
+                EmpleadoT7 empleadot7 = new EmpleadoT7(nombret7, salarioT7);
+                System.out.println("Nombre: " + nombret7 + "Salario: " + empleadot7.getSalario());
+                empleadot7.setSalario(50);
+                
+                System.out.println("------------Cuenta bamncaria----------------");
+                 System.out.println("Digite el numero de cuenta");
+                String numCuentaT7= sc.nextLine();
+                System.out.println("Digite el tipo");
+                String tipoT7 = sc.nextLine();
+                
+                CuentaBancariaT7 cue = new CuentaBancariaT7(numCuentaT7, tipoT7, 0);
+                cue.mostrarDetalles();
+                //System.out.println(cue.numCuenta); // no deja acceder ditectamente porque es private 
+                
+                
+                
+                break;
             case 8:
             case 9:
             case 10:
