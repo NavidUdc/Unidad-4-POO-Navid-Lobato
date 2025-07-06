@@ -5,6 +5,9 @@
 import Taller1.Ejercicios.CuenaBancaria;
 import Taller1.Ejercicios.Estudiante;
 import Taller1.Ejercicios.Libro;
+import Taller10.Ejercicios.EstudianteT10;
+import Taller10.Ejercicios.PersonaT10;
+import Taller10.Ejercicios.ProfesorT10;
 import Taller2.Ejercicios.Estudiante1;
 import Taller2.Ejercicios.Producto;
 import Taller3.Ejercicios.Matematicas;
@@ -227,6 +230,19 @@ public class Main {
                
                 
             case 10:
+                  System.out.println("---------Taller 10-----------");
+                System.out.println("---------Prueba Presentacion-----------");
+                
+                PersonaT10 persona10= new PersonaT10();
+                EstudianteT10 estudiante10= new EstudianteT10();
+                ProfesorT10 profesor10= new ProfesorT10();
+                
+                persona10.presentarse();
+                profesor10.presentarse();
+                estudiante10.presentarse();
+                
+                break;
+                
             case 11:
             case 12:
             case 13:
