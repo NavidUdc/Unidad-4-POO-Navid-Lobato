@@ -8,6 +8,12 @@ import Taller1.Ejercicios.Libro;
 import Taller10.Ejercicios.EstudianteT10;
 import Taller10.Ejercicios.PersonaT10;
 import Taller10.Ejercicios.ProfesorT10;
+import Taller11.Ejercicios.CirculoT11;
+import Taller11.Ejercicios.EmpleadoT11;
+import Taller11.Ejercicios.FiguraT11;
+import Taller11.Ejercicios.GerenteT11;
+import Taller11.Ejercicios.RectanguloT11;
+import Taller11.Ejercicios.VendedorT11;
 import Taller2.Ejercicios.Estudiante1;
 import Taller2.Ejercicios.Producto;
 import Taller3.Ejercicios.Matematicas;
@@ -249,6 +255,24 @@ public class Main {
                 break;
 
             case 11:
+                 System.out.println("---------Taller 11-----------");
+                System.out.println("---------Prueba Figuras-----------");
+                
+                FiguraT11 fig1 = new CirculoT11(5);
+                FiguraT11 fig2 = new RectanguloT11(5, 8);
+                
+                fig1.mostrarArea();
+                fig2.mostrarArea();
+                
+                System.out.println("---------Prueba Empleado-----------");
+                EmpleadoT11 gere= new GerenteT11("Navid", 2000);
+                EmpleadoT11 vende= new VendedorT11("Marta", 59);
+                
+                gere.mostrarDetalles();;
+                System.out.println("--------------------");
+                vende.mostrarDetalles();
+                
+                break;
             case 12:
             case 13:
             case 14:
