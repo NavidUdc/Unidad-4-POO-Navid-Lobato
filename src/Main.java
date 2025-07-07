@@ -16,6 +16,10 @@ import Taller11.Ejercicios.RectanguloT11;
 import Taller11.Ejercicios.VendedorT11;
 import Taller12.Ejercicios.ANimalT12;
 import Taller12.Ejercicios.PersonaT12;
+import Taller13.Ejercicios.FiguraT13;
+import Taller13.Ejercicios.PatoT13;
+import Taller13.Ejercicios.Rectangulo;
+import Taller13.Ejercicios.TrianguloT13;
 import Taller2.Ejercicios.Estudiante1;
 import Taller2.Ejercicios.Producto;
 import Taller3.Ejercicios.Matematicas;
@@ -289,6 +293,21 @@ public class Main {
                 break;
                 
             case 13:
+                 System.out.println("---------Taller 13-----------");
+                System.out.println("---------Prueba Figura-----------");
+                
+                FiguraT13 figT13= new TrianguloT13(5, 8); 
+                FiguraT13 fig1T13= new Rectangulo(6, 2); 
+                
+                System.out.println(figT13.calcularArea());
+                System.out.println(fig1T13.calcularArea());
+                
+                
+                System.out.println("---------Prueba Pato-----------");
+                PatoT13 patoT13 = new PatoT13("nase");
+                patoT13.nadar();
+                patoT13.volar();
+                break;
             case 14:
             case 15:
             case 16:
