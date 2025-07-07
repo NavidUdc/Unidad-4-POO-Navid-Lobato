@@ -35,13 +35,16 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Digite una opcion");
+        System.out.println("Digite una opcion:");
+        while (!sc.hasNextInt()) {
+            System.out.println("Por favor, ingresa un número válido:");
+            sc.next(); 
+        }
         int op = sc.nextInt();
-
+        sc.nextLine(); 
         switch (op) {
 
             case 1:
-
                 System.out.println("---------Libro---------");
                 System.out.println("Por favor digite el Nombre del Autor:");
                 String autor = sc.nextLine();
@@ -91,7 +94,7 @@ public class Main {
                 break;
             case 2:
                 System.out.println("---------Estudiante---------");
-                System.out.println("Por favor digite el Numero :");
+                System.out.println("Por favor digite el Nombre :");
                 String nombree1 = sc.nextLine();
                 System.out.println("Por favor digite la edad:");
                 String edade1 = sc.nextLine();
@@ -134,14 +137,17 @@ public class Main {
                         System.out.println("-----------Resta------------------");
                         System.out.println("Digite los numeros a sumar");
                         resultado = Matematicas.Restar(a, b);
+                        break;
                     case 3:
                         System.out.println("-----------Multiplicacipn------------------");
                         System.out.println("Digite los numeros a sumar");
                         resultado = Matematicas.Multiplicar(a, b);
+                        break;
                     case 4:
                         System.out.println("-----------Diviison------------------");
                         System.out.println("Digite los numeros a sumar");
                         resultado = Matematicas.Div(a, b);
+                        break;
                     default:
                         System.out.println("Opcion no valida");
                         break;
@@ -204,7 +210,7 @@ public class Main {
                 System.out.println("---------Prueba Estudiante--------");
 
                 EstudianteT8 est8_1 = new EstudianteT8("Laura ", 20, "2025A1234");
-                EstudianteT8 est8_2 = new EstudianteT8("Juan ",18 , "2025B5678");
+                EstudianteT8 est8_2 = new EstudianteT8("Juan ", 18, "2025B5678");
 
                 est8_1.mostrarInformacion();
                 System.out.println("------------------------");
@@ -221,33 +227,40 @@ public class Main {
             case 9:
                 System.out.println("---------Taller 9-----------");
                 System.out.println("---------Prueba Empleado-----------");
-                EmpleadoT9 empleT9 = new EmpleadoT9("Navid jose ",33, "Desarrollo de software");
+                EmpleadoT9 empleT9 = new EmpleadoT9("Navid jose ", 33, "Desarrollo de software");
                 empleT9.mostrarDetalles();
                 System.out.println("---------Prueba Animal-----------");
-                PezT9 pez= new PezT9("Mojarra Roja", "Mar");
+                PezT9 pez = new PezT9("Mojarra Roja", "Mar");
                 pez.mostrarDetalles();
                 break;
-               
-                
+
             case 10:
-                  System.out.println("---------Taller 10-----------");
+                System.out.println("---------Taller 10-----------");
                 System.out.println("---------Prueba Presentacion-----------");
-                
-                PersonaT10 persona10= new PersonaT10();
-                EstudianteT10 estudiante10= new EstudianteT10();
-                ProfesorT10 profesor10= new ProfesorT10();
-                
+
+                PersonaT10 persona10 = new PersonaT10();
+                EstudianteT10 estudiante10 = new EstudianteT10();
+                ProfesorT10 profesor10 = new ProfesorT10();
+
                 persona10.presentarse();
                 profesor10.presentarse();
                 estudiante10.presentarse();
-                
+
                 break;
-                
+
             case 11:
             case 12:
             case 13:
             case 14:
             case 15:
+            case 16:
+            case 17:
+            case 18:
+            case 19:
+
+            default:
+                System.out.println("Opcion Ingresada invalida");
+                break;
         }
 
     }
