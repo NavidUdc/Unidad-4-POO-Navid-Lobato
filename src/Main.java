@@ -14,6 +14,8 @@ import Taller11.Ejercicios.FiguraT11;
 import Taller11.Ejercicios.GerenteT11;
 import Taller11.Ejercicios.RectanguloT11;
 import Taller11.Ejercicios.VendedorT11;
+import Taller12.Ejercicios.ANimalT12;
+import Taller12.Ejercicios.PersonaT12;
 import Taller2.Ejercicios.Estudiante1;
 import Taller2.Ejercicios.Producto;
 import Taller3.Ejercicios.Matematicas;
@@ -274,6 +276,18 @@ public class Main {
                 
                 break;
             case 12:
+                 System.out.println("---------Taller 12-----------");
+                System.out.println("---------Prueba Persona-----------");
+                PersonaT12 per= new PersonaT12("Navid");
+                per.hablar();
+                per.hablar();
+                
+                System.out.println("---------Prueba Animal-----------");
+                ANimalT12 ani = new ANimalT12("Perro");
+                ani.nadar();
+                ani.volar();
+                break;
+                
             case 13:
             case 14:
             case 15:

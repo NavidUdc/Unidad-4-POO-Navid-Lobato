@@ -18,7 +18,7 @@ public interface VeehiculoT12 {
 }
 // Clase Coche que implementa la interfaz Vehiculo
 
-public class Coche implements VeehiculoT12 {
+class Coche implements VeehiculoT12 {
 
     @Override
     public void acelerar() {
