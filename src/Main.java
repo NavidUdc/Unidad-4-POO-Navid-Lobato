@@ -20,6 +20,15 @@ import Taller13.Ejercicios.FiguraT13;
 import Taller13.Ejercicios.PatoT13;
 import Taller13.Ejercicios.Rectangulo;
 import Taller13.Ejercicios.TrianguloT13;
+import Taller14.Ejercicios.BicicletaT14;
+import Taller14.Ejercicios.CirculoT14;
+import Taller14.Ejercicios.CocheT14;
+import Taller14.Ejercicios.EstudianteT14;
+import Taller14.Ejercicios.FiguraT14;
+import Taller14.Ejercicios.PersonaT14;
+import Taller14.Ejercicios.ProfesorT14;
+import Taller14.Ejercicios.RectanguloT14;
+import Taller14.Ejercicios.VehiculoT14;
 import Taller2.Ejercicios.Estudiante1;
 import Taller2.Ejercicios.Producto;
 import Taller3.Ejercicios.Matematicas;
@@ -309,6 +318,30 @@ public class Main {
                 patoT13.volar();
                 break;
             case 14:
+                System.out.println("---------Taller 14-----------");
+                System.out.println("---------Prueba Figura-----------");
+                
+                FiguraT14 fig1T14 = new CirculoT14(5);
+                FiguraT14 fig2T14 = new RectanguloT14(5, 3);
+                
+                fig1T14.calcularArea();
+                fig2T14.calcularArea();
+                System.out.println("---------Prueba Persona-----------");
+                PersonaT14 persona1T14 = new PersonaT14(); 
+                PersonaT14 persona2T14 = new EstudianteT14(); 
+                PersonaT14 persona3T14 = new ProfesorT14(); 
+                
+                persona1T14.presentarse();
+                persona2T14.presentarse();
+                persona3T14.presentarse();
+                
+                System.out.println("---------Prueba Vehiculo-----------");
+                VehiculoT14 v1= new CocheT14();
+                VehiculoT14 v2= new BicicletaT14();
+                
+                v1.mover();
+                v2.mover();
+                break;
             case 15:
             case 16:
             case 17:
