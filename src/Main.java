@@ -29,6 +29,12 @@ import Taller14.Ejercicios.PersonaT14;
 import Taller14.Ejercicios.ProfesorT14;
 import Taller14.Ejercicios.RectanguloT14;
 import Taller14.Ejercicios.VehiculoT14;
+import Taller15.Ejercicios.EtiquetaService;
+import Taller15.Ejercicios.LibroT15;
+import Taller15.Ejercicios.PrecioService;
+import Taller15.Ejercicios.ProductoT15;
+import Taller15.Ejercicios.RepoLibroService;
+import Taller15.Ejercicios.ReporteLibroService;
 import Taller2.Ejercicios.Estudiante1;
 import Taller2.Ejercicios.Producto;
 import Taller3.Ejercicios.Matematicas;
@@ -343,6 +349,22 @@ public class Main {
                 v2.mover();
                 break;
             case 15:
+                 System.out.println("---------Taller 14-----------");
+                System.out.println("---------Prueba Libro-----------");
+                LibroT15 libro = new LibroT15 ("Cien años de soledad", "Gabriel garcia marquez", 305);
+                ReporteLibroService reporte = new ReporteLibroService();
+                reporte.imprimir(libro);
+                RepoLibroService repo = new RepoLibroService();
+                repo.guardar(libro);
+    
+                System.out.println("---------Prueba Producto-----------");
+                ProductoT15 productot15 = new ProductoT15("Nutella", 7500);
+                PrecioService preSer = new PrecioService();
+                System.out.println(preSer.calcularConIVA(productot15));
+                EtiquetaService etiqueta = new EtiquetaService();
+                etiqueta.imprimir(productot15);
+                
+                break;
             case 16:
             case 17:
             case 18:
