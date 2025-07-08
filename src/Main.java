@@ -35,6 +35,9 @@ import Taller15.Ejercicios.PrecioService;
 import Taller15.Ejercicios.ProductoT15;
 import Taller15.Ejercicios.RepoLibroService;
 import Taller15.Ejercicios.ReporteLibroService;
+import Taller16.Ejercicios.DescuentoFijo;
+import Taller16.Ejercicios.DescuentoPorcentajeT16;
+import Taller16.Ejercicios.DescuentoT16;
 import Taller2.Ejercicios.Estudiante1;
 import Taller2.Ejercicios.Producto;
 import Taller3.Ejercicios.Matematicas;
@@ -65,10 +68,10 @@ public class Main {
         System.out.println("Digite una opcion:");
         while (!sc.hasNextInt()) {
             System.out.println("Por favor, ingresa un número válido:");
-            sc.next(); 
+            sc.next();
         }
         int op = sc.nextInt();
-        sc.nextLine(); 
+        sc.nextLine();
         switch (op) {
 
             case 1:
@@ -276,48 +279,48 @@ public class Main {
                 break;
 
             case 11:
-                 System.out.println("---------Taller 11-----------");
+                System.out.println("---------Taller 11-----------");
                 System.out.println("---------Prueba Figuras-----------");
-                
+
                 FiguraT11 fig1 = new CirculoT11(5);
                 FiguraT11 fig2 = new RectanguloT11(5, 8);
-                
+
                 fig1.mostrarArea();
                 fig2.mostrarArea();
-                
+
                 System.out.println("---------Prueba Empleado-----------");
-                EmpleadoT11 gere= new GerenteT11("Navid", 2000);
-                EmpleadoT11 vende= new VendedorT11("Marta", 59);
-                
-                gere.mostrarDetalles();;
+                EmpleadoT11 gere = new GerenteT11("Navid", 2000);
+                EmpleadoT11 vende = new VendedorT11("Marta", 59);
+
+                gere.mostrarDetalles();
+                ;
                 System.out.println("--------------------");
                 vende.mostrarDetalles();
-                
+
                 break;
             case 12:
-                 System.out.println("---------Taller 12-----------");
+                System.out.println("---------Taller 12-----------");
                 System.out.println("---------Prueba Persona-----------");
-                PersonaT12 per= new PersonaT12("Navid");
+                PersonaT12 per = new PersonaT12("Navid");
                 per.hablar();
                 per.hablar();
-                
+
                 System.out.println("---------Prueba Animal-----------");
                 ANimalT12 ani = new ANimalT12("Perro");
                 ani.nadar();
                 ani.volar();
                 break;
-                
+
             case 13:
-                 System.out.println("---------Taller 13-----------");
+                System.out.println("---------Taller 13-----------");
                 System.out.println("---------Prueba Figura-----------");
-                
-                FiguraT13 figT13= new TrianguloT13(5, 8); 
-                FiguraT13 fig1T13= new Rectangulo(6, 2); 
-                
+
+                FiguraT13 figT13 = new TrianguloT13(5, 8);
+                FiguraT13 fig1T13 = new Rectangulo(6, 2);
+
                 System.out.println(figT13.calcularArea());
                 System.out.println(fig1T13.calcularArea());
-                
-                
+
                 System.out.println("---------Prueba Pato-----------");
                 PatoT13 patoT13 = new PatoT13("nase");
                 patoT13.nadar();
@@ -326,46 +329,55 @@ public class Main {
             case 14:
                 System.out.println("---------Taller 14-----------");
                 System.out.println("---------Prueba Figura-----------");
-                
+
                 FiguraT14 fig1T14 = new CirculoT14(5);
                 FiguraT14 fig2T14 = new RectanguloT14(5, 3);
-                
+
                 fig1T14.calcularArea();
                 fig2T14.calcularArea();
                 System.out.println("---------Prueba Persona-----------");
-                PersonaT14 persona1T14 = new PersonaT14(); 
-                PersonaT14 persona2T14 = new EstudianteT14(); 
-                PersonaT14 persona3T14 = new ProfesorT14(); 
-                
+                PersonaT14 persona1T14 = new PersonaT14();
+                PersonaT14 persona2T14 = new EstudianteT14();
+                PersonaT14 persona3T14 = new ProfesorT14();
+
                 persona1T14.presentarse();
                 persona2T14.presentarse();
                 persona3T14.presentarse();
-                
+
                 System.out.println("---------Prueba Vehiculo-----------");
-                VehiculoT14 v1= new CocheT14();
-                VehiculoT14 v2= new BicicletaT14();
-                
+                VehiculoT14 v1 = new CocheT14();
+                VehiculoT14 v2 = new BicicletaT14();
+
                 v1.mover();
                 v2.mover();
                 break;
             case 15:
-                 System.out.println("---------Taller 14-----------");
+                System.out.println("---------Taller 14-----------");
                 System.out.println("---------Prueba Libro-----------");
-                LibroT15 libro = new LibroT15 ("Cien años de soledad", "Gabriel garcia marquez", 305);
+                LibroT15 libro = new LibroT15("Cien años de soledad", "Gabriel garcia marquez", 305);
                 ReporteLibroService reporte = new ReporteLibroService();
                 reporte.imprimir(libro);
                 RepoLibroService repo = new RepoLibroService();
                 repo.guardar(libro);
-    
+
                 System.out.println("---------Prueba Producto-----------");
                 ProductoT15 productot15 = new ProductoT15("Nutella", 7500);
                 PrecioService preSer = new PrecioService();
                 System.out.println(preSer.calcularConIVA(productot15));
                 EtiquetaService etiqueta = new EtiquetaService();
                 etiqueta.imprimir(productot15);
-                
+
                 break;
             case 16:
+                double precio = 450000;
+
+                DescuentoT16 descuentoPorcentaje = new DescuentoPorcentajeT16(0.10); // 10%
+                DescuentoT16 descuentoFijo = new DescuentoFijo(5000);
+
+                System.out.println("Precio con 10% de descuento: $" + descuentoPorcentaje.aplicarDescuento(precio));
+                System.out.println("Precio con descuento fijo de $5000: $" + descuentoFijo.aplicarDescuento(precio));
+                
+                break;
             case 17:
             case 18:
             case 19:
